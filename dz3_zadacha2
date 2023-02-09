@@ -1,13 +1,14 @@
 void main() {
   int j = 0;
-  List<int> mass = [12, 23, 65, -12, -4];
-  Function func = (int j, List<int> mass) {
+  var mass = <int>[12, 23, 65, -12, -4];
+  int func(int j, List<int> mass) {
     for (int i = 0; i < mass.length; i++) {
       if (mass[i] >= 0) {
         j = j + mass[i];
       }
     }
-    print(j);
-  };
-  func(j, mass);
+    return j;
+  }
+
+  print(func(j, mass));
 }
