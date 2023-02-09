@@ -1,11 +1,11 @@
 void main() {
   int j = 0;
   List<String> mass = ['qwerty', 'podic', 'list', 'as', 'eq'];
-  Function func = (int j, List<String> mass) {
+  int func(int j, List<String> mass) {
     for (int i = 0; i < mass.length; i++) {
       j = j + mass[i].length;
     }
-    print(j);
-  };
-  func(j, mass);
+    return j;
+  }
+  print(func(j, mass));
 }
