@@ -1,0 +1,13 @@
+import 'dart:io';
+
+void main() {
+  int n, i = 0;
+  print('Введите число: ');
+  String? value = stdin.readLineSync();
+  n = int.parse(value.toString());
+  while (n > 0) {
+    n = n ~/ 10;
+    i++;
+  }
+  print(i);
+}
