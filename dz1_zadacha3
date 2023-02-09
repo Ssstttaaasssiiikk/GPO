@@ -1,0 +1,13 @@
+import 'dart:io';
+
+void main() {
+  int n, i;
+  print('Введите год: ');
+  String? value = stdin.readLineSync();
+  n = int.parse(value.toString());
+  i = n % 100;
+  if (i == 0) {
+    print(n ~/ 100);
+  } else
+    print(n ~/ 100 + 1);
+}
