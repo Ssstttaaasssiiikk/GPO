@@ -1,11 +1,23 @@
+//void main() {
+  //int j = 0;
+  //List<String> mass = ['qwerty', 'podic', 'list', 'as', 'eq'];
+  //int func(int j, List<String> mass) {
+    //for (int i = 0; i < mass.length; i++) {
+      //j = j + mass[i].length;
+    //}
+    //return j;
+  //}
+  //print(func(j, mass));
+//}
+
+//исправленная программа 
+
 void main() {
-  int j = 0;
-  List<String> mass = ['qwerty', 'podic', 'list', 'as', 'eq'];
-  int func(int j, List<String> mass) {
-    for (int i = 0; i < mass.length; i++) {
-      j = j + mass[i].length;
-    }
-    return j;
+  final mass = ['qwerty', 'podic', 'list', 'as', 'eq'];
+  int func(mass) {
+    mass = mass.map((element) => element.length);
+    int sum = mass.fold(0, (sum0, element) => sum0 + element);
+    return sum;
   }
-  print(func(j, mass));
+  print(func(mass));
 }
