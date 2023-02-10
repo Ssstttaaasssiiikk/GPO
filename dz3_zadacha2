@@ -1,14 +1,27 @@
+//void main() {
+  //int j = 0;
+  //var mass = <int>[12, 23, 65, -12, -4];
+  //int func(int j, List<int> mass) {
+    //for (int i = 0; i < mass.length; i++) {
+      //if (mass[i] >= 0) {
+        //j = j + mass[i];
+      //}
+    //}
+    //return j;
+  //}
+  //print(func(j, mass));
+//}
+
+//исправленная программа 
+
 void main() {
   int j = 0;
-  var mass = <int>[12, 23, 65, -12, -4];
+  var mass = [12, 23, 65, -12, -4];
   int func(int j, List<int> mass) {
-    for (int i = 0; i < mass.length; i++) {
-      if (mass[i] >= 0) {
-        j = j + mass[i];
-      }
-    }
-    return j;
+    var mass1 = mass.where((element) => element > 0);
+    int sum = mass1.fold(0, (sum0, element) => sum0 + element);
+    return sum;
   }
-
   print(func(j, mass));
 }
+
