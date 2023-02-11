@@ -11,3 +11,17 @@ void main() {
   } else
     print(n ~/ 100 + 1);
 }
+
+//обезьяны эволюционируют
+
+import 'dart:io';
+
+void main() {
+  int n, i;
+  print('Введите год: ');
+  String? value = stdin.readLineSync();
+  n = int.parse(value.toString());
+  i = n % 100;
+  i == 0 ? print(n ~/ 100) : print(n ~/ 100 + 1);
+}
+
