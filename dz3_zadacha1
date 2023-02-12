@@ -1,17 +1,3 @@
-//void main() {
-  //int j = 0;
-  //List<String> mass = ['qwerty', 'podic', 'list', 'as', 'eq'];
-  //int func(int j, List<String> mass) {
-    //for (int i = 0; i < mass.length; i++) {
-      //j = j + mass[i].length;
-    //}
-    //return j;
-  //}
-  //print(func(j, mass));
-//}
-
-//исправленная программа 
-
 void main() {
   final mass = ['qwerty', 'podic', 'list', 'as', 'eq'];
   int func(mass) {
