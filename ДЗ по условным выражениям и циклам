@@ -1,13 +1,8 @@
 void main() {
-  for (int n = 1; n <= 100; n++) {
-    if ((n % 3 == 0) && (n % 5 == 0)) {
-      print('Super Quiz ($n)');
-    } else if (n % 3 == 0) {
-      print('Super ($n)');
-    } else if (n % 5 == 0) {
-      print('Quiz ($n)');
-    } else {
-      print(n);
-    }
+  dynamic mass = [12, 'qwerty', 234, true, 3214532, 'podic', 'list', 12];
+  dynamic value = 12, j = 0;
+  for (int i = 0; i < mass.length; i++) {
+    if (mass[i] == value) j++;
   }
+  j == 0 ? print(false) : print(true);
 }
