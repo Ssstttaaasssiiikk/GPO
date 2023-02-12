@@ -1,0 +1,30 @@
+void showOnDisplay(WhatPrint, answer) => print('$WhatPrint: $answer');
+
+void main() {
+  var cuboid = Cuboid.constructor(1, 2, 3);
+  showOnDisplay('Cuboid Volume', cuboid.Volume);
+  showOnDisplay('Cuboid SurfaceArea', cuboid.SurfaceArea);
+  var cube = Cube(2);
+  showOnDisplay('Cube Volume', cube.Volume);
+  showOnDisplay('Cube SurfaceArea', cube.SurfaceArea);
+}
+
+class Cuboid {
+  var length, width, heigth;
+  Cuboid.constructor(this.length, [this.width, this.heigth]);
+  int get SurfaceArea {
+    return (length * width * 2 + heigth * width * 2 + length * heigth * 2);
+  }
+
+  int get Volume {
+    return (length * width * heigth);
+  }
+}
+
+class Cube extends Cuboid {
+  Cube(var length) : super.constructor(length) {
+    this.length = length;
+    this.width = length;
+    this.heigth = length;
+  }
+}
