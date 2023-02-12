@@ -2,21 +2,6 @@ void main() {
   dynamic mass = [12, 'qwerty', 234, true, 3214532, 'podic', 'list', 12];
   dynamic value = 12, j = 0;
   for (int i = 0; i < mass.length; i++) {
-    if (mass[i] == value) {
-      j++;
-    }
-  }
-  if (j == 0) {
-    print(false);
-  } else
-    print(true);
-}
-
-//обезьяны эволюционируют
-void main() {
-  dynamic mass = [12, 'qwerty', 234, true, 3214532, 'podic', 'list', 12];
-  dynamic value = 12, j = 0;
-  for (int i = 0; i < mass.length; i++) {
     if (mass[i] == value) j++;
   }
   j == 0 ? print(false) : print(true);
