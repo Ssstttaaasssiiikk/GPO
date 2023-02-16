@@ -1,30 +1,32 @@
-void showOnDisplay(WhatPrint, answer) => print('$WhatPrint: $answer');
+void showOnDisplay(String whatPrint, int answer) =>
+    print('$whatPrint: $answer');
 
 void main() {
-  var cuboid = Cuboid.constructor(1, 2, 3);
-  showOnDisplay('Cuboid Volume', cuboid.Volume);
-  showOnDisplay('Cuboid SurfaceArea', cuboid.SurfaceArea);
-  var cube = Cube(2);
-  showOnDisplay('Cube Volume', cube.Volume);
-  showOnDisplay('Cube SurfaceArea', cube.SurfaceArea);
+  final cuboid = Cuboid.cuboid(1, 2, 3);
+  showOnDisplay('Cuboid Volume', cuboid.volume);
+  showOnDisplay('Cuboid SurfaceArea', cuboid.surfaceArea);
+  final cube = Cube(2);
+  showOnDisplay('Cube Volume', cube.volume);
+  showOnDisplay('Cube SurfaceArea', cube.surfaceArea);
 }
 
 class Cuboid {
-  var length, width, heigth;
-  Cuboid.constructor(this.length, [this.width, this.heigth]);
-  int get SurfaceArea {
+  int length, width, heigth;
+  Cuboid.cuboid(this.length, this.width, this.heigth);
+
+  int get surfaceArea {
     return (length * width * 2 + heigth * width * 2 + length * heigth * 2);
   }
 
-  int get Volume {
+  int get volume {
     return (length * width * heigth);
   }
 }
 
 class Cube extends Cuboid {
-  Cube(var length) : super.constructor(length) {
-    this.length = length;
-    this.width = length;
-    this.heigth = length;
+  Cube(int length) : super.cuboid(length, length, length) {
+    super.length = length;
+    super.width = length;
+    super.heigth = length;
   }
 }
